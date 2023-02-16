@@ -1,0 +1,56 @@
+{
+  "name": "code-challenge-okboy",
+  "version": "1.0.0",
+  "description": "Node JS project",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "nodemon": "nodemon index.js",
+    "db:create": "sequelize db:create",
+    "migrate:up": "sequelize db:migrate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jorgeparedes1987/code-challenge-okboy.git"
+  },
+  "author": "Jorge Paredes",
+  "dependencies": {
+    "@vitejs/plugin-react": "^3.1.0",
+    "bcrypt-nodejs": "0.0.3",
+    "bootstrap": "^5.2.3",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "crypto": "0.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.3",
+    "jsdom": "^11.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.4",
+    "method-override": "^2.3.9",
+    "moment": "^2.27.0",
+    "momentjs": "^2.0.0",
+    "nanoid-generate": "^1.0.0",
+    "passport": "^0.3.2",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.9.0",
+    "pg-hstore": "^2.3.4",
+    "raviger": "^4.1.2",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-dom": "^18.2.0",
+    "sequelize": "^6.28.0",
+    "sequelize-cli": "^6.6.0",
+    "serve-static": "^1.15.0",
+    "uuid": "^3.2.1",
+    "validator": "^7.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "vite": "^3.1.8"
+  },
+  "keywords": []
+}
