@@ -1,20 +1,24 @@
-const bCrypt = require('bcrypt-nodejs');
+const jwt = require('jsonwebtoken');
+const JWT_SECRET = require('../config/jwt').JWT_SECRET;
 
 class AuthService {
-    constructor(passport) {
-        this.passport = passport;
-    }
+  constructor(passport) {
+    this.passport = passport;
+  }
+  
+  validatingToken() {
+    return this.passport.authenticate("jwt", { session: false });
+  }
 
-    validatingToken() {
-        return this.passport.authenticate("jwt", { session: false });
-    }
-
-    async comparePassword({oldPassword, currentPassword}){
-        if(!bCrypt.compareSync(oldPassword, currentPassword)){
-            return false;
-        }
-        return true;
-    }
+  static async newToken({user}){
+    return jwt.sign(
+      {
+        ...user,
+      },
+      JWT_SECRET,
+      { expiresIn: '1h' }
+    );
+  }
 }
 
 module.exports = AuthService;

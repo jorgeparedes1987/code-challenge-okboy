@@ -1,8 +1,5 @@
 require('dotenv').config();
-const sessionConfig = require('./config/session');
-const cookieParser = require('cookie-parser');
 const Express = require('express');
-const cors = require('cors');
 const env = process.env.NODE_ENV;
 const PORT = parseInt(process.env.PORT, 10) || 8081;
 const isDev = env === "development";
